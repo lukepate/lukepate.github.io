@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="">
+  <title>Pokemon Red</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href='Pokemon GB.ttf' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-  helppppp
+  <div id='bg_image'>
+    <div id='player'>
+      <img id='player_img' src='images/player.png'>
+        <p class='name'>Pokemon</p>
+          <p class='health'>100/ 100</p>
+            <ul id='lancePokeballs'>
+              <li><button class=>'lpb1'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'lpb2'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'lpb3'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'lpb4'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'lpb5'<img class='lpb1' src='images/pokemonball.png'></button></li>
+            </ul>
+            <ul id='yourPokeballs'>
+              <li><button class=>'ypb1'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'ypb2'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'ypb3'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'ypb4'<img class='lpb1' src='images/pokemonball.png'></button></li>
+              <li><button class=>'ypb5'<img class='lpb1' src='images/pokemonball.png'></button></li>
+            </ul>
+  </div>
+    <div id='enemy'>
+      <p class='name'></p>
+        <p class='health'></p>
+    </div>
+    <img id='enemy_img' src=''>
+      <span id='status_text'></span>
+        <div id='menu_bar'>
+          <img id='menubg' src='images/menubg.png'>
+            <p id='attack_btn'>Fight</p>
+              <p id='item_btn'>Item</p>
+                <p id='status_text'></p>
+                  <p id='switch'>
+                    <img id='pkmn' src='images/pkmn.png'>
+                  </p>
+                  <p id='run_btn'>Run</p>
+        </div>
+  </div>
 </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>

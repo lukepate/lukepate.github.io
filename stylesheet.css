@@ -1,0 +1,160 @@
+body{
+  font-family: Pokemon GB, Arial;
+  font-size: 18px;
+  zoom: 1.75;
+  background: url(images/pokemonbg.jpg);
+  background-repeat: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  background-color: #000000;
+}
+button{
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    width: 40px;
+}
+ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#bg_image{
+  position: relative;
+  width: 556px;
+  height: 371px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+
+}
+#player{
+  position: absolute;
+  height:110px;
+  width:100%;
+  margin-top:158px;
+}
+#player_img{
+  position: absolute;
+  width:150px;
+  left:50px;
+  bottom: -1px;
+  margin-right: 0px;
+}
+#player p{
+  margin-left: 295px;
+  margin-bottom:0;
+  margin-top:0;
+}
+#player .name{
+  margin-top:40px;
+}
+#enemy{
+  position: absolute;
+  top:-20px;
+  width:300px;
+}
+#enemy p{
+  margin-left: 70px;
+  margin-bottom:0;
+  margin-top:0;
+}
+#enemy_img{
+  position: absolute;
+  width:180px;
+  height:180px;
+  left: 335px;
+  top:0px;
+  transition: transform .5s;
+}
+#status_text{
+  position: absolute;
+  height:45px;
+  width:45%;
+  text-align: center;
+  left:5%;
+  top:290px;
+  color:black;
+}
+#menubg{
+  position: absolute;
+
+  width:247px;
+  text-align: center;
+  left:51%;
+  top:273px;
+  color:black;
+}
+#attack_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:58%;
+  width:20%;
+
+  top:290px;
+}
+#item_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:58%;
+  width:20%;
+  top:322px;
+}
+#pkmn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:80%;
+  width:35px;
+  top:307px;
+}
+#run_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:78%;
+  width:20%;
+  top:322px;
+}
+#lancePokeballs{
+ position: absolute;
+  width:100%;
+  left: 53px;
+  bottom: 240px;
+  display: none;
+}
+#yourPokeballs{
+ position: absolute;
+  height:110px;
+  width:100%;
+  left: 283px;
+  top: 30px;
+  display: none;
+
+}
+.lpb2{
+ display: inline-block;
+ background-color: none;
+ text-decoration: none;
+ color: none;
+
+}
+
+
+
