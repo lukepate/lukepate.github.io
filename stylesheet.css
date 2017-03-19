@@ -9,6 +9,7 @@ body{
   background-position: center;
   width: 100%;
   background-color: #000000;
+
 }
 button{
     border: none;
@@ -16,6 +17,7 @@ button{
     color: transparent;
     width: 40px;
 }
+
 ul {
     position: fixed;
     list-style-type: none;
@@ -33,6 +35,9 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+audio{
+  display: none;
+}
 #bg_image{
   position: relative;
   width: 556px;
@@ -47,13 +52,16 @@ li a {
   height:110px;
   width:100%;
   margin-top:158px;
+  display:
 }
 #player_img{
-  position: absolute;
-  width:150px;
-  left:50px;
-  bottom: -1px;
-  margin-right: 0px;
+    position: absolute;
+  width:0px;
+  height:0px;
+  left: 5px;
+  margin-left: 0px;
+  top:-78px;
+  transition: transform 2.5s;
 }
 #player p{
   margin-left: 295px;
@@ -75,9 +83,10 @@ li a {
 }
 #enemy_img{
   position: absolute;
-  width:180px;
-  height:180px;
+  width:0px;
+  height:0px;
   left: 335px;
+  margin-left: 0px;
   top:0px;
   transition: transform .5s;
 }
@@ -92,12 +101,21 @@ li a {
 }
 #menubg{
   position: absolute;
-
   width:247px;
   text-align: center;
   left:51%;
   top:273px;
   color:black;
+}
+#attackbar{
+  position: absolute;
+  width:297px;
+  text-align: center;
+  left:43%;
+  top:263px;
+  color:black;
+  z-index: 4;
+
 }
 #attack_btn{
   cursor: pointer;
@@ -105,8 +123,49 @@ li a {
   position: absolute;
   left:58%;
   width:20%;
-
   top:290px;
+  z-index: 4;
+  display: none;
+}
+#attack1_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:55%;
+  width:80%;
+  top:272px;
+  z-index: 5;
+  display: all;
+}
+#attack2_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:55%;
+  width:80%;
+  top:296px;
+  z-index: 5;
+   display: all;
+}
+#attack3_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:55%;
+  width:80%;
+  top:320px;
+  z-index: 5;
+   display: all;
+}
+#attack4_btn{
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  left:55%;
+  width:80%;
+  top:344px;
+  z-index: 5;
+   display: all;
 }
 #item_btn{
   cursor: pointer;
@@ -115,6 +174,8 @@ li a {
   left:58%;
   width:20%;
   top:322px;
+  display: none;
+
 }
 #pkmn{
   cursor: pointer;
@@ -123,6 +184,7 @@ li a {
   left:80%;
   width:35px;
   top:307px;
+  display: none;
 }
 #run_btn{
   cursor: pointer;
@@ -131,6 +193,7 @@ li a {
   left:78%;
   width:20%;
   top:322px;
+  display: none;
 }
 #lancePokeballs{
  position: absolute;
@@ -138,6 +201,7 @@ li a {
   left: 53px;
   bottom: 240px;
   display: none;
+
 }
 #yourPokeballs{
  position: absolute;
@@ -147,14 +211,15 @@ li a {
   top: 30px;
   display: none;
 
+
 }
 .lpb2{
  display: inline-block;
  background-color: none;
  text-decoration: none;
  color: none;
-
 }
+
 
 
 

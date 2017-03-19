@@ -7,10 +7,15 @@
 
 </head>
 <body>
+<!-- <audio controls autoplay>
+  <source src="elitefour.mp3" type="audio/mpeg">
+</audio> -->
+
   <div id='bg_image'>
     <div id='player'>
+     <p class='name'>Pokemon</p>
       <img id='player_img' src='images/player.png'>
-        <p class='name'>Pokemon</p>
+
           <p class='health'>100/ 100</p>
             <ul id='lancePokeballs'>
               <li><button class=>'lpb1'<img class='lpb1' src='images/pokemonball.png'></button></li>
@@ -31,8 +36,14 @@
       <p class='name'></p>
         <p class='health'></p>
     </div>
-    <img id='enemy_img' src=''>
+    <img id='enemy_img' src='images/lance.png'>
       <span id='status_text'></span>
+        <div id='attack_bar'>
+          <img id='attackbar' src='images/menubg.png'>
+
+
+        </div>
+
         <div id='menu_bar'>
           <img id='menubg' src='images/menubg.png'>
             <p id='attack_btn'>Fight</p>
@@ -41,9 +52,14 @@
                   <p id='switch'>
                     <img id='pkmn' src='images/pkmn.png'>
                   </p>
+                      <p id='attack1_btn'></p>
+              <p id='attack2_btn'></p>
+                <p id='attack3_btn'></p>
+                  <p id='attack4_btn'></p>
                   <p id='run_btn'>Run</p>
         </div>
   </div>
+
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
