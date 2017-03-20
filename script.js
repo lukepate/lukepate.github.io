@@ -6,22 +6,21 @@
 
 
   var pokemon = [
-    ['Arcanine','images/059.png',90,'Fire Blast','Bite','Ember','Take Down','fire'],
-    ['Exeggutor','images/103.png',95,'Hypnosis','Stomp','Barrage','Psybeam'],
-    ['Alakazam','images/065.png',55,'Psybeam','Psychic', 'Reflect', 'Recover'],
-    ['Machamp','images/068.png',90,'Leer','Focus Energy', 'Fissure', 'Submission'],
+    ['Arcanine','images/059.png',90,'Fire Blast','Bite','Ember','Take Down'],
+    ['Exeggutor','images/103.png',95,'Seed Bomb','Stomp','Psychic','Psybeam'],
+    ['Alakazam','images/065.png',55,'Psybeam','Psychic', 'Reflect', 'Tackle'],
+    ['Machamp','images/068.png',90,'Chop','Focus Energy', 'Fissure', 'Submission'],
     ['Lapras','images/131.png',130,'Body Slam','Hydro Pump', 'Blizard', 'Surf'],
-
   ]
     var lanceTeam = [
-    ['Gyarados','images/132.png',95,'Hydro Pump','Dragon Rage','Leer','Hyper Beam'],
+    ['Gyarados','images/132.png',95,'Hydro Pump','Dragon Rage','Leer','Hyper Beam', 'water'],
     ['Dragonair','images/148.png',61,'Agility','Slam','Dragon Rage','Hyper Beam'],
     ['Dragonair','images/148.png',61,'Agility','Slam','Dragon Rage','Hyper Beam'],
     ['Aerodactyl','images/142.png',60,'Supersonic','Take Down','Bite','Hyper Beam'],
     ['Dragonite','images/149.png',91,'Agility','Slam','Barrier','Hyper Beam'],
   ];
-
-let attack = parseInt([Math.floor(Math.random()*20)+5]);
+let attack = 60;
+// let attack = parseInt([Math.floor(Math.random()*20)+5]);
 let random = pokemon[Math.floor(Math.random()*pokemon.length)];
 let randomL = lanceTeam[Math.floor(Math.random()*lanceTeam.length)];
 
@@ -116,13 +115,12 @@ let i = 0;
 
 
 
-              $("#menu_bar").show();
+                  $("#menu_bar").show();
                   if(lanceTeam[0][2] < 0){
 
                   $("#enemy_img").attr("src",lanceTeam[1][1]);
                   enemyName.text(lanceTeam[1][0]);
                   enemyHealth.text(lanceTeam[1][2]);
-                  $("#status_text").text(lanceTeam[1][0] + " used " + lanceTeam[1][3]);
                   lanceTeam[1][2] = lanceTeam[1][2] - attack;
                   $('#enemy_img').animate({
                   marginTop: "-=0px",
@@ -157,18 +155,20 @@ let i = 0;
                   enemyName.text(lanceTeam[4][0]);
                   enemyHealth.text(lanceTeam[4][2]);
                   lanceTeam[4][2] = (lanceTeam[4][2] - attack);
+
                   }
                   }
                   }
                   }
                   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 200);
                   }
                   youAttack()
                   })
 
                   attack2.on('click', function(){
+                       $("#menu_bar").hide();
                   let youAttack = function(){
                   function explode(){
                   enemyHealth.empty().append(lanceTeam[0][2])
@@ -179,7 +179,7 @@ let i = 0;
                   $('#enemy_img').animate({
                   marginLeft: "+=30px",
                   }, 500 );
-
+                     $("#menu_bar").show();
                   if(lanceTeam[0][2] < 0){
                   $("#enemy_img").attr("src",lanceTeam[1][1]);
                   enemyName.text(lanceTeam[1][0]);
@@ -222,11 +222,12 @@ let i = 0;
                   }
                   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 1200);
                   }
                   youAttack()
                   })
                 attack3.on('click', function(){
+                $("#menu_bar").hide();
                 let youAttack = function(){
                 function explode(){
                 enemyHealth.empty().append(lanceTeam[0][2])
@@ -237,7 +238,7 @@ let i = 0;
                   $('#enemy_img').animate({
                   marginLeft: "+=30px",
                   }, 500 );
-
+                     $("#menu_bar").show();
                   if(lanceTeam[0][2] < 0){
                   $("#enemy_img").attr("src",lanceTeam[1][1]);
                   enemyName.text(lanceTeam[1][0]);
@@ -280,12 +281,13 @@ let i = 0;
                   }
                   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 700);
                   }
                   youAttack()
                   })
                 attack4.on('click', function(){
                 let youAttack = function(){
+                $("#menu_bar").hide();
                 function explode(){
                 enemyHealth.empty().append(lanceTeam[0][2])
                 lanceTeam[0][2] = (lanceTeam[0][2] - attack);
@@ -295,6 +297,7 @@ let i = 0;
                   $('#enemy_img').animate({
                   marginTop: "+=30px",
                   }, 100 );
+                  $("#menu_bar").show();
 
                   if(lanceTeam[0][2] < 0){
                   $("#enemy_img").attr("src",lanceTeam[1][1]);
@@ -330,14 +333,16 @@ let i = 0;
                   enemyName.text(lanceTeam[4][0]);
                   enemyHealth.text(lanceTeam[4][2]);
                   lanceTeam[4][2] = (lanceTeam[4][2] - attack);
-
+                    if(lanceTeam[4][2] < 0){
+                      alert('youlose')
+                    }
                   }
                   }
                   }
                   }
                   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 1400);
                   }
                   youAttack()
                   })
@@ -350,12 +355,16 @@ let i = 0;
             $("#status_text").text(" You sent out " + pokemon[0][0]);
             playerHealth.empty().append(pokemon[0][2])
             pokemon[0][2] = (pokemon[0][2] - attack);
+            if(lanceTeam[0][6] === 'water'){
+              pokemon[0][2] = (pokemon[0][2] -100);
+            }
+
             $('#player_img').animate({
-                  marginLeft: "-=15px",
-                  }, 500 );
-                  $('#player_img').animate({
-                  marginLeft: "+=15px",
-                  }, 100 );
+            marginLeft: "-=15px",
+            }, 500 );
+            $('#player_img').animate({
+            marginLeft: "+=15px",
+            }, 100 );
 
 
                   if(pokemon[0][2] < 0){
@@ -406,10 +415,9 @@ let i = 0;
 
 
                   if(pokemon[4][2] < 0){
-                  $("#player_img").attr("src",pokemon[5][1]);
-                  player.text(pokemon[5][0]);
-                  playerHealth.text(pokemon[5][2]);
                   $("#status_text").text(" You defeated Lance!  ");
+                  $("#menu_bar").hide();
+                  $("#enemy_img").attr("src",'images/lance.png');
 
                   pokemon[5][2] = (pokemon[5][2] - attack);
 
@@ -418,9 +426,7 @@ let i = 0;
                   }
                   }
                   }
-                  // if(lanceTeam[4][2] >= 0){
-                  //     alert('youlose')
-                  //   }
+
                   }
                   setTimeout(explode, 1000);
                   }
@@ -587,7 +593,7 @@ let i = 0;
                   //     alert('youlose')
                   //   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 500);
                   }
                   theyAttack()
                   })
@@ -663,7 +669,7 @@ let i = 0;
                   }
                   }
                   }
-                  setTimeout(explode, 1000);
+                  setTimeout(explode, 600);
                   }
                   theyAttack()
                   })
